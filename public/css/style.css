@@ -1,0 +1,187 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #5c6bc0;
+}
+.backgroundHeader {
+    background-color: #5c6bc0;
+}
+button.MuiButtonBase-root.MuiIconButton-root.iconSearch.MuiIconButton-colorInherit {
+    margin-left: -50px;
+    width: 40px;
+    height: 30px;
+}
+.navbar-brand img{
+    width: 130px;
+}
+input.form-control.mr-sm-2 {
+    height: 30px;
+}
+span.MuiButton-label {
+    color: white;
+}
+nav.navbar.navbar-expand-sm.navbar-dark {
+    padding: 0px;
+}
+button.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-colorInherit {
+    background-color: darkslateblue;
+}
+ul.navbar-nav.mr-auto.mt-2.mt-lg-0.text-center {
+    margin-left: 40px;
+    text-transform: uppercase;
+}
+li.nav-item.active {
+    background-color: darkslateblue;
+}
+.carousel-item img{
+    width: 730px;
+    height: 320px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.bannerLeft img{
+    width: 350px;
+    height: 150px;
+}
+.bannerLeft img:first-child{
+    margin-bottom: 20px;
+}
+h3.text-center {
+    background-color: darkslateblue;
+    color: #ebe7e7;
+    margin: 0px;
+}
+div#splide1,
+div#splide2
+{
+    padding: 0px;
+}
+div#splide2
+{
+    height: 400px;
+}
+
+.wrapper img{
+    width: 360px;
+    height: 150px;
+    background-size: cover;
+}
+.wrapper2{
+    height: 425px;
+    border: solid 1px darkslateblue;
+}
+.wrapper2 img{
+    height: 298px;
+    border:solid 1px #e5e5e5;
+}
+.wrapper2 .card-body{
+    height: 122px;
+}
+
+ul.splide__pagination {
+    display: none;
+}
+.backgroundFooter {
+    background-color: #e5e5e5;
+    margin-top: 50px;
+}
+.copyRight {
+    text-align: center;
+}
+.container.footer {
+    padding-top: 50px;
+}
+.copyRight p {
+    margin: 0px;
+    margin-top: 10px;
+    background-color: #fefefe;
+    font-size: 12px;
+
+}
+.footer a {
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+}
+.wrapper2 .card h4{
+    font-size: 16px;
+    margin-top: -10px;
+}
+.wrapper2 .card .card-text .sale {
+    color: #666161c9;
+    text-decoration: line-through;
+}
+span.float-left {
+    font-weight: bold;
+    color: red;
+}
+button.MuiButtonBase-root.MuiIconButton-root.onTop {
+    background-color: darkslateblue;
+    width: 15px;
+    height: 15px;
+    position: fixed;
+    bottom: 10%;
+    right: 1%;
+    transition: 1s;
+}
+button.MuiButtonBase-root.MuiIconButton-root.icon {
+    transition: 1s;
+}
+td.cartImg img {
+    width: 50px;
+}
+
+.cartProduct_tr td {
+    line-height: 50px;
+}
+td.cost {font-weight: 500;color: red;}
+button.MuiButtonBase-root.MuiIconButton-root.cartButtonDelete {
+    color: red;
+}
+.col-sm-10 {
+    padding: 0;
+}
+
+.col-sm-2 {
+    padding: 0;
+}
+p.card-text {
+    text-align: center;
+    color: red;
+    font-weight: 600;
+}
+
+.card {
+    overflow: hidden;
+}
+.card-text.cartButton {
+    margin-top: 10px;
+}
+
+.card-text.cartButton {
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    transform: translateX(50px);
+}
+
+.card:hover .card-text.cartButton {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    transform: translateX(0px);
+}
+.card:hover img.card-img-top{
+    transform: scale(1.1);
+    transition: 0.5s;
+    border-bottom: none;
+}
+img.card-img-top {
+    transform: scale(1);
+    transition: 0.5s;
+    overflow: hidden;
+}
