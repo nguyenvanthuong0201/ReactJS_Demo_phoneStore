@@ -23,6 +23,7 @@ input.form-control.mr-sm-2 {
 }
 span.MuiButton-label {
     color: white;
+    font-size: 11px;
 }
 nav.navbar.navbar-expand-sm.navbar-dark {
     padding: 0px;
@@ -184,4 +185,115 @@ img.card-img-top {
     transform: scale(1);
     transition: 0.5s;
     overflow: hidden;
+}
+.MuiAlert-message {
+    margin-left: 38%;
+    font-size: 20px;
+}
+.IPhoneCartContent {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.MuiPaper-root.MuiPaper-elevation4.MuiPaper-rounded {
+    width: 20%;
+    height: 100px;
+    border: 1px solid rgb(192, 192, 192);
+    border-radius: none;
+
+}
+.rowHeaderIphone img {
+    width: 540px;
+}
+.rowTilteIphone h5 {
+    background-color:#5c6bc0;
+    margin: 0px;
+    color: #fefefe;
+    padding-left: 50px;
+}
+.MuiPaper-root.paperProductSmart.MuiPaper-elevation4.MuiPaper-rounded {
+    position: relative;
+    width: 20%;
+    height: 350px;
+}
+
+.productNew {
+    position: absolute;
+    top: 1%;
+    left: 2%;
+    background: green;
+    opacity: 0.8;
+    border-radius: 5px;
+    color: #fefefe;
+    z-index: 99;
+    padding: 0px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.productInstallment {
+    position: absolute;
+    top: 1%;
+    left: 70%;
+    background: coral;
+    opacity: 0.8;
+    border-radius: 5px;
+    color: #fefefe;
+    z-index: 999;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.headerProductSmart img {
+    width: 222px;
+    position: absolute;
+    z-index: 1;
+    position: absolute;
+    top: 2px;
+}
+
+.productTitle {
+    position: absolute;
+    bottom: 32%;
+    font-size: 12px;
+    /* padding: 5px 5px; */
+    background-color: red;
+    opacity: 0.8;
+    border-radius: 10px;
+    color: #fefefe;
+    font-weight: 500;
+    z-index: 999;
+    margin: 0px 5px;
+}
+
+.contentProductSmart {
+    position: absolute;
+    bottom: 15%;
+}
+
+.contentProductSmart h6 {margin: 0px 10px;font-size: 14px;}
+
+.sale {
+    text-align: center;
+    font-weight: 600;
+    color: red;
+}
+button.btn.btn-danger.CartProductPhone {
+    position: absolute;
+    width: 101px;
+    bottom: 2%;
+    right: 2%;
+    height: 9%;
+}
+button.btn.btn-primary.seeInformationProduct {
+    position: absolute;
+    bottom: 2%;
+    bottom: 2%;
+    left: 2%;
+    font-size: 14px;
+}
+.headerProductSmart:hover img {
+    transform: scale(1.1);
+    transition: 0.5s;
+    z-index: 9999;
 }

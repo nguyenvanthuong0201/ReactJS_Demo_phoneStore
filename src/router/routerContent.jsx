@@ -1,18 +1,21 @@
 import React from 'react'
-import Cpt_Home from '../components/Cpt_Home'
-import Cpt_HomeAccessories from '../components/Cpt_HomeAccessories'
-import Cpt_HomeCart from '../components/Cpt_HomeCart'
-import Cpt_HomeIPhone from '../components/Cpt_HomeIPhone'
-import Cpt_HomeLaptop from '../components/Cpt_HomeLaptop'
-import Cpt_HomePhone from '../components/Cpt_HomePhone'
-import Cpt_HomeTablet from '../components/Cpt_HomeTablet'
-import Cpt_NotFound from '../components/Cpt_NotFound'
+import Cpt_Home from '../components/com.Home/Cpt_Home'
+import Cpt_HomeAccessories from '../components/com.Accessories/Cpt_HomeAccessories'
+import Cpt_HomeCart from '../components/com.Cart/Cpt_HomeCart'
+import Cpt_HomeIPhone from '../components/com.IPhone/Cpt_HomeIPhone'
+import Cpt_HomeLaptop from '../components/com.Laptop/Cpt_HomeLaptop'
+import Cpt_HomePhone from '../components/com.Phone/Cpt_HomePhone'
+import Cpt_HomeTablet from '../components/com.Tablet/Cpt_HomeTablet'
+import Cpt_NotFound from '../components/com.NotFound/Cpt_NotFound'
+import ContainerHome from '../containers/ContainerHome'
+import ContainerHomeCart from '../containers/ContainerHomeCart';
+import ContainerIPhone from '../containers/ContainerIPhone'
 
 const routers=[
     {
         path:"/",
         exact:true,
-        main:()=> <Cpt_Home/>
+        main:()=><ContainerHome/>
     },
     {
         path:"/accessories",
@@ -22,12 +25,12 @@ const routers=[
     {
         path:"/cart",
         exact:false,
-        main:()=> <Cpt_HomeCart/>
+        main:()=> <ContainerHomeCart/>
     },
     {
         path:"/iPhone",
         exact:false,
-        main:()=> <Cpt_HomeIPhone/>
+        main:()=> <ContainerIPhone/>
     },
     {
         path:"/lapTop",

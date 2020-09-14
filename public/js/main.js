@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  $(".icon").hide();
   $(window).scroll(function () {
     var vitri = $("body,html").scrollTop();
     if(vitri > 100){

@@ -1,10 +1,13 @@
 import React, { Component } from "react";
-import Cpt_Header from "./components/Cpt_Header";
+import Cpt_Header from "./components/com.Header/Cpt_Header";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import routes from './router/routerContent'
-import Cpt_Footer from "./components/Cpt_Footer";
+import Cpt_Footer from "./components/com.Footer/Cpt_Footer";
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import { IconButton } from "@material-ui/core";
+import Message from "./components/com.Message/Message";
+import ContainerMessage from "./containers/ContainerMessage";
+import ContainerHeaderCart from "./containers/ContainerHeaderCart";
 
 class App extends Component {
   showContent=(routes)=>{
@@ -22,7 +25,8 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <Cpt_Header/>
+          <ContainerHeaderCart/>
+          <Message/>
           <div className="container">
           <Switch>{this.showContent(routes)}</Switch>
           </div>
@@ -31,6 +35,7 @@ class App extends Component {
             </IconButton>
           <Cpt_Footer/>
         </div>
+        <ContainerMessage/>
       </Router>
     );
   }

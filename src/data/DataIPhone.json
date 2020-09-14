@@ -1,0 +1,167 @@
+[
+    {  
+        "id":21,
+        "img":"img/iphone1.png",
+        "alt":"ảnh 1",
+        "title":"Apple IPhone 11 64Gb",
+        "sale":22000000,
+        "cost":15000000,
+        "promotion":" Đã sẵn hàng - giá tốt nhất Tp HCM",
+        "new":true,
+        "installment":true
+    },
+    {
+        "id":22,
+        "img":"img/iphone2.png",
+        "alt":"ảnh 2",
+        "title":"Apple iPhone XR 256Gb",
+        "sale":10000000,
+        "cost":7300000,
+        "promotion":" Deal Hot-Khuyến mãi Sock",
+        "new":true,
+        "installment":false
+    },
+    {
+        "id":23,
+        "img":"img/iphone3.png",
+        "alt":"ảnh 3",
+        "title":"Apple iPhone Xs Max 64Gb",
+        "sale":15900000,
+        "cost":14000000,
+        "promotion":" Giá cực sốc-Quà tặng 2.000.000 đ",
+        "new":true,
+        "installment":true
+    },
+    {
+        "id":24,
+        "img":"img/iphone4.png",
+        "alt":"ảnh 5",
+        "title":"Apple iPhone 8 64Gb Quốc tế",
+        "sale":6400000,
+        "cost":"",
+        "promotion":" Deal Hot-Khuyến mãi Sock",
+        "new":true,
+        "installment":true
+    },
+    {
+        "id":25,
+        "img":"img/iphone5.png",
+        "alt":"ảnh 4",
+        "title":"Apple iPhone XR Lock 64Gb",
+        "sale":8000000,
+        "cost":11500000,
+        "promotion":" Deal Hot-Khuyến mãi Sock",
+        "new":true,
+        "installment":true
+    },
+    {
+        "id":26,
+        "img":"img/iphone6.png",
+        "alt":"ảnh 6",
+        "title":"Apple iPhone 8 plus Lock 64Gb",
+        "sale":8900000,
+        "cost":1000000,
+        "promotion":" Sản phẩm bán chạy ,quà tặng BHV trị giá 700,000 đ",
+        "new":false,
+        "installment":true
+    },
+    {
+        "id":27,
+        "img":"img/iphone7.png",
+        "alt":"ảnh 1",
+        "title":"Apple iPhone XR plus Lock",
+        "sale":9400000,
+        "cost":10000000,
+        "promotion":" Sản phẩm bán chạy ,quà tặng BHV trị giá 700,000 đ",
+        "new":false,
+        "installment":true
+    },
+    {
+        "id":28,
+        "img":"img/iphone8.png",
+        "alt":"ảnh 2",
+        "title":"IPad 9.7 2017 - Gen 5-32Gb",
+        "sale":6000000,
+        "cost":7300000,
+        "promotion":"",
+        "new":true,
+        "installment":true
+    },
+    {
+        "id":29,
+        "img":"img/iphone9.png",
+        "alt":"ảnh 3",
+        "title":" Apple IPhone Xs Max 64Gb",
+        "sale":15000000,
+        "cost":14000000,
+        "promotion":"",
+        "new":true,
+        "installment":true
+    },
+    {
+        "id":210,
+        "img":"img/iphone10.png",
+        "alt":"ảnh 3",
+        "title":" Apple IPhone Xs Max 64Gb",
+        "sale":15000000,
+        "cost":14000000,
+        "promotion":"Sản phẩm bán chạy ,quà tặng BHV trị giá 700,000 đ",
+        "new":true,
+        "installment":true
+    },
+    {
+        "id":211,
+        "img":"img/iphone11.png",
+        "alt":"ảnh 3",
+        "title":" Apple IPhone Xs Max 64Gb",
+        "sale":15000000,
+        "cost":14000000,
+        "promotion":"",
+        "new":true,
+        "installment":true
+    },
+    {
+        "id":212,
+        "img":"img/iphone12.png",
+        "alt":"ảnh 3",
+        "title":" Apple IPhone Xs Max 64Gb",
+        "sale":15000000,
+        "cost":14000000,
+        "promotion":"Sản phẩm bán chạy ,quà tặng BHV trị giá 700,000 đ",
+        "new":true,
+        "installment":true
+    },
+    {
+        "id":213,
+        "img":"img/iphone13.png",
+        "alt":"ảnh 3",
+        "title":" Apple IPhone Xs Max 64Gb",
+        "sale":15000000,
+        "cost":14000000,
+        "promotion":"",
+        "new":true,
+        "installment":true
+    },
+    {
+        "id":214,
+        "img":"img/iphone14.png",
+        "alt":"ảnh 3",
+        "title":"Apple IPhone Xs Max 64Gb",
+        "sale":15000000,
+        "cost":14000000,
+        "promotion":" Sản phẩm bán chạy ,quà tặng BHV trị giá 700,000 đ",
+        "new":true,
+        "installment":true
+    },
+    {
+        "id":215,
+        "img":"img/iphone15.png",
+        "alt":"ảnh 3",
+        "title":" Apple IPhone Xs Max 64Gb",
+        "sale":15000000,
+        "cost":14000000,
+        "promotion":"",
+        "new":true,
+        "installment":true
+    }
+]
