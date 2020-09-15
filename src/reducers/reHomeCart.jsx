@@ -32,9 +32,9 @@ const reHomeCart = (state=initialState,action)=>{
         }
         localStorage.setItem("store",JSON.stringify(state));
         return [...state];
-        console.log(quantity);
 
     default: return [...state];
+    
     }
 }
 const findProductInCart = (cart,product) => {

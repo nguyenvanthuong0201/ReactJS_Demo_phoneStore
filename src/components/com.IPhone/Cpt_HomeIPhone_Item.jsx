@@ -1,45 +1,113 @@
 import React, { Component } from "react";
 import Paper from "@material-ui/core/Paper";
 import Button from "@material-ui/core/Button";
-import * as Message from '../../constants/Messages'
-
+import * as Message from "../../constants/Messages";
+import Cpt_Modal_Home from "../com.Home/Cpt_Modal_Home";
+import Dialog from "@material-ui/core/Dialog";
+import DialogTitle from "@material-ui/core/DialogTitle";
+import DialogContent from "@material-ui/core/DialogContent";
+import DialogActions from "@material-ui/core/DialogActions";
 
 class Cpt_HomeIPhone_Item extends Component {
-    onAddToCart = (IPhone) =>{
-        this.props.onAddToCart(IPhone)
-        this.props.onMessageChange(Message.MSG_ADD_TO_CARD_SUCCESS)
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      open: false,
+    };
+  }
+
+  handleClickOpen = () => {
+    this.setState({
+      open: true,
+    });
+  };
+  handleClose = () => {
+    this.setState({
+      open: false,
+    });
+  };
+
+  onAddToCart = (product) => {
+    this.props.onAddToCart(product);
+    this.props.onChangeMessage(Message.MSG_ADD_TO_CARD_SUCCESS);
+  };
   render() {
-      let{IPhone}=this.props
+    let { product ,onAddToCart,onChangeMessage} = this.props;
     return (
       <Paper elevation={4} className="paperProductSmart">
         <div className="headerProductSmart">
           <div className="titleSmart">
-    <div className="productNew ">{IPhone.new === true ? "Mới ra mắt":""}</div>
-    <div className="productInstallment">{IPhone.installment === true ? "Trả góp 0%" : ""}</div>
+            <div className="productNew ">
+              {product.new === true ? "Mới ra mắt" : ""}
+            </div>
+            <div className="productInstallment">
+              {product.installment === true ? "Trả góp 0%" : ""}
+            </div>
           </div>
-          <img src={IPhone.img} alt="" />
-    <div className="productTitle"> {IPhone.promotion ? IPhone.promotion : ""}</div>
+          <img src={product.img} alt="" />
+          <div className="productTitle">
+            {product.promotion ? product.promotion : ""}
+          </div>
         </div>
         <div className="contentProductSmart">
-    <h6>{IPhone.title}</h6>
-    <div className="sale">{IPhone.sale.toLocaleString()} ₫</div>
+          <h6>{product.title}</h6>
+          <div className="sale">{product.sale.toLocaleString()} ₫</div>
         </div>
         <div className="buttonSmart">
-          <Button
+          {/* <Button
             variant="contained"
             size="medium"
             color="primary"
             className="btn btn-primary seeInformationProduct"
           >
             Chi tiết
+          </Button> */}
+          <Button
+            variant="contained"
+            size="medium"
+            color="primary"
+            className="btn btn-primary seeInformationProduct"
+            onClick={this.handleClickOpen}
+          >
+            Chi tiết
           </Button>
+          <Dialog
+            onClose={this.handleClose}
+            aria-labelledby="customized-dialog-title"
+            maxWidth="lg"
+            open={this.state.open}
+          >
+            <DialogTitle
+              id="customized-dialog-title"
+              onClose={this.handleClose}
+            >
+              {product.title}
+            </DialogTitle>
+            {/* Start boby Modal */}
+            <Cpt_Modal_Home
+              product={product}
+              onAddToCart={onAddToCart}
+              onChangeMessage={onChangeMessage}
+            />
+            {/* End boby Modal */}
+
+            <DialogActions>
+              <Button
+                autoFocus
+                onClick={this.handleClose}
+                color="secondary"
+                className="btnCloseModal"
+              >
+                Đóng
+              </Button>
+            </DialogActions>
+          </Dialog>
           <Button
             variant="contained"
             size="medium"
             color="secondary"
             className="btn btn-danger CartProductPhone"
-            onClick={()=>this.onAddToCart(IPhone)}
+            onClick={() => this.onAddToCart(product)}
           >
             Giỏ hàng
           </Button>

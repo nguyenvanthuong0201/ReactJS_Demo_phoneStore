@@ -297,3 +297,95 @@ button.btn.btn-primary.seeInformationProduct {
     transition: 0.5s;
     z-index: 9999;
 }
+.MuiDialogContent-root.MuiDialogContent-dividers {
+    display: flex;
+    flex-wrap: wrap;
+}
+.MuiPaper-root.ModalImgPage.MuiPaper-elevation3.MuiPaper-rounded {
+    width: 380px;
+    height: 440px;
+}
+
+.MuiPaper-root.ModalInformationPage.MuiPaper-elevation3.MuiPaper-rounded {
+    width: 700px;
+}
+.ModalImgPage img{
+    width: 380px;
+    height: 400px;
+}
+.ModalImgPage hr{
+    margin: 0;
+}
+.assess {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: goldenrod;
+}
+button.MuiButtonBase-root.MuiButton-root.MuiButton-text.btnCloseModal.MuiButton-textSecondary {
+    width: 160px;
+    background: currentColor;
+}
+
+h2.MuiTypography-root.MuiTypography-h6 {
+    font-size: 25px;
+    padding-left: 30px;
+}
+.colLeft img {
+    width: 380px;
+}
+.colLeft img {
+    width: 380px;
+}
+
+.costProductModal .sale {
+    font-size: 30px;
+    width: 200px;
+}
+.costProductModal {
+    height: 60px;
+    line-height: 60px;
+    display: flex;
+    flex-direction: row;
+}
+.costModal {
+    width: 115px;
+}
+
+.installmentModal {
+    width: 113px;
+}
+.contentCard {
+    text-align: left;
+    margin-left: 10px;
+}
+button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.btn.btn-danger.float-left.buttonBuyLeft.MuiButton-containedSecondary {
+    width: 185px;
+}
+
+button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.btn.btn-danger.float-right.buttonBuyRight.MuiButton-containedPrimary {
+    width: 185px;
+}
+.RegistrationModal {
+    margin-top: 85px;
+}
+
+input#outlined-basic {width: 350px;height: 5px;}
+
+button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.btn.btn-danger.buttonRegistration {
+    width: 377px;
+    background-color: darkgreen;
+}
+.cardModal hr {
+    margin: 0px;
+}
+p.card-text.textModal {
+    font-size: 11px;
+    text-align: left;
+    margin: 0px 0px 5px;
+}
+.card-body.bodyModal {
+    padding: 10px;
+}
+span.costModalSpan {text-decoration: line-through;color: gray;}
+

@@ -1,17 +1,46 @@
 import React, { Component } from "react";
 import * as Message from "../../constants/Messages";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import MessageChange from "../com.Message/MessageChange";
 import Button from "@material-ui/core/Button";
+import Dialog from "@material-ui/core/Dialog";
+import DialogTitle from "@material-ui/core/DialogTitle";
+import DialogContent from "@material-ui/core/DialogContent";
+import DialogActions from "@material-ui/core/DialogActions";
+import Paper from "@material-ui/core/Paper";
+import StarIcon from "@material-ui/icons/Star";
+import StarBorderIcon from "@material-ui/icons/StarBorder";
+import TextField from "@material-ui/core/TextField";
+import PhoneIcon from "@material-ui/icons/Phone";
+import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
+import RecentActorsIcon from "@material-ui/icons/RecentActors";
+import Cpt_Modal_Home from "./Cpt_Modal_Home";
 
 export default class Cpt_HomeProduct extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      open: false,
+    };
+  }
+
+  handleClickOpen = () => {
+    this.setState({
+      open: true,
+    });
+  };
+  handleClose = () => {
+    this.setState({
+      open: false,
+    });
+  };
   onAddToCart = (product) => {
+    console.log(product);
     this.props.onAddToCart(product);
     this.props.onChangeMessage(Message.MSG_ADD_TO_CARD_SUCCESS);
-    // return <MessageChange />;
   };
+
   render() {
-    let { product } = this.props;
+    let { product,onAddToCart,onChangeMessage} = this.props;
     return (
       <SplideSlide>
         <div className="card cartHomeProduct">
@@ -33,9 +62,37 @@ export default class Cpt_HomeProduct extends Component {
                 size="medium"
                 color="primary"
                 className="btn btn-primary float-left"
+                onClick={this.handleClickOpen}
               >
                 Chi tiết
               </Button>
+              <Dialog
+                onClose={this.handleClose}
+                aria-labelledby="customized-dialog-title"
+                maxWidth="lg"
+                open={this.state.open}
+              >
+                <DialogTitle
+                  id="customized-dialog-title"
+                  onClose={this.handleClose}
+                >
+                  {product.title}
+                </DialogTitle>
+                {/* Start boby Modal */}
+               <Cpt_Modal_Home product={product} onAddToCart={onAddToCart} onChangeMessage={onChangeMessage}/>
+                {/* End boby Modal */}
+                
+                <DialogActions>
+                  <Button
+                    autoFocus
+                    onClick={this.handleClose}
+                    color="secondary"
+                    className="btnCloseModal"
+                  >
+                    Đóng
+                  </Button>
+                </DialogActions>
+              </Dialog>
               <Button
                 variant="contained"
                 size="medium"

@@ -3,29 +3,46 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
 import "@splidejs/splide/dist/css/themes/splide-sea-green.min.css";
 import "@splidejs/splide/dist/css/themes/splide-skyblue.min.css";
-import DataHomePromotion from '../../data/DataHomePromotion'
+import DataHomePromotion from "../../data/DataHomePromotion";
+
+import Button from "@material-ui/core/Button";
+import Dialog from "@material-ui/core/Dialog";
+// import MuiDialogTitle from "@material-ui/core/DialogTitle";
+// import MuiDialogContent from "@material-ui/core/DialogContent";
+// import MuiDialogActions from "@material-ui/core/DialogActions";
+// import IconButton from "@material-ui/core/IconButton";
+// import CloseIcon from "@material-ui/icons/Close";
+// import Typography from "@material-ui/core/Typography";
+import DialogTitle from "@material-ui/core/DialogTitle";
+import DialogContent from "@material-ui/core/DialogContent";
+import DialogActions from "@material-ui/core/DialogActions";
 
 class Cpt_Home extends Component {
-  showSplidePromotion=(DataHomePromotion)=>{
-        let splides = DataHomePromotion;
-        let result = null;
-        if(splides.length > 0){
-            result = splides.map((splide,index)=>{
-                return(
-                    <SplideSlide key={index}>
-                    <img  src={splide.img} alt={splide.alt} />
-                  </SplideSlide>
-                )
-            })
-        }
-        return result;
+  
+  showSplidePromotion = (DataHomePromotion) => {
+    let splides = DataHomePromotion;
+    let result = null;
+    if (splides.length > 0) {
+      result = splides.map((splide, index) => {
+        return (
+          <SplideSlide key={index}>
+            <img src={splide.img} alt={splide.alt} />
+          </SplideSlide>
+        );
+      });
     }
+    return result;
+  };
   render() {
     return (
       <div>
         <div className="row">
           <div className="col-sm-8">
-            <div id="carouselId" className="carousel slide" data-ride="carousel">
+            <div
+              id="carouselId"
+              className="carousel slide"
+              data-ride="carousel"
+            >
               <ol className="carousel-indicators">
                 <li
                   data-target="#carouselId"
@@ -132,12 +149,12 @@ class Cpt_Home extends Component {
                     }}
                     id="splide2"
                   >
-                    {this.props.children}
+                   {this.props.children}
                   </Splide>
                 </div>
               </div>
             </div>
-
+              
             {/* End flickity sản phẩm */}
           </div>
         </div>

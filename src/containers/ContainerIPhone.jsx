@@ -6,16 +6,16 @@ import { actAddToCart, actChangeMessage } from '../actions/indexActions';
 
 
 class ContainerIPhone extends Component {
-    showIPhone=(IPhones)=>{
-        let {onAddToCart,onMessageChange}= this.props
+    showIPhone=(products)=>{
+        let {onAddToCart,onChangeMessage}= this.props
         let result = null;
-        if(IPhones.length > 0 ){
-            result= IPhones.map((IPhone,index)=>{
+        if(products.length > 0 ){
+            result= products.map((product,index)=>{
                 return(
                     <Cpt_HomeIPhone_Item 
-                    IPhone={IPhone}
+                    product={product}
                     key={index}
-                    onMessageChange={onMessageChange} 
+                    onChangeMessage={onChangeMessage} 
                     onAddToCart={onAddToCart}/>
                 )
             })
@@ -23,14 +23,14 @@ class ContainerIPhone extends Component {
         return result;
     }
     render() {
-    let {IPhones}=this.props
-    return <Cpt_HomeIPhone>{this.showIPhone(IPhones)}</Cpt_HomeIPhone>;
+    let {products}=this.props
+    return <Cpt_HomeIPhone>{this.showIPhone(products)}</Cpt_HomeIPhone>;
     }
 }
 
 const mapStateToProps = (state) => {
     return{
-        IPhones: state.reIPhoneProducts
+        products: state.reIPhoneProducts
     }
 }
 
@@ -39,7 +39,7 @@ const mapDispatchToProps =(dispatch,props)=> {
         onAddToCart:(product)=>{
             dispatch(actAddToCart(product,1))
         },
-        onMessageChange:(message)=>{
+        onChangeMessage:(message)=>{
             dispatch(actChangeMessage(message))
         }
     }

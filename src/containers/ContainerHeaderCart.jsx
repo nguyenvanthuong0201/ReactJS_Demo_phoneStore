@@ -5,24 +5,9 @@ import Cpt_Header from '../components/com.Header/Cpt_Header';
 
 
 class ContainerHeaderCart extends Component {
-    // onTotalCart = (carts) => {
-    //     let result = null;
-    //     if(carts.length > 0 ){
-    //         result= carts.map((cart,index)=>{
-    //             return <Header cart={cart} key={index}/>
-    //         })
-    //     }
-    //     // if (cart.length > 0) {
-    //     //   for (let i = 0; i < cart.length; i++) {
-    //     //     total += cart[i].quantity;
-    //     //   }
-    //     // }
-    //     // return total;
-    //   };
     render() {
-    let{carts}=this.props
-    console.log("aaa",carts)
-    return <Cpt_Header carts={carts}/>
+    let{cart}=this.props;
+    return <Cpt_Header cart={cart}/>
     }
 }
 const mapStateToProps = (state) => {

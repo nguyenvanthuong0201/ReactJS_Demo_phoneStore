@@ -39,5 +39,11 @@ export const actUpdateMessage = (message) =>{
         message,
     }
 }
+export const actOpenModal = (product)=>{
+    return{
+        type: types.OPEN_MODAL,
+        product
+    }
+}
 
 
