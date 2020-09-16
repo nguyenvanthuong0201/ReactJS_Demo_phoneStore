@@ -39,10 +39,14 @@ export const actUpdateMessage = (message) =>{
         message,
     }
 }
-export const actOpenModal = (product)=>{
+export const actSnackbar = ()=>{
     return{
-        type: types.OPEN_MODAL,
-        product
+        type: types.OPEN_SNACKBAR,
+    }
+}
+export const actSnackbarClose=()=>{
+    return{
+        type: types.OPEN_SNACKBAR_CLOSE
     }
 }
 

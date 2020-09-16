@@ -19,6 +19,7 @@ class Cpt_HomeCart_Item extends Component {
   onDeleteCart=(product)=>{
     this.props.onDeleteCart(product)
     this.props.onDeleteMessage(Message.MSG_DELETE_CARD_SUCCESS)
+    this.props.onOpenSnackbar()
   }
   onUpdateCart=(product,quantity)=>{
     if(quantity > 0) {
@@ -27,6 +28,7 @@ class Cpt_HomeCart_Item extends Component {
       })
       this.props.onUpdateCart(product,quantity);
       this.props.onUpdateMessage(Message.MSG_UPDATE_CARD_SUCCESS);
+      this.props.onOpenSnackbar()
     }
   }
   render() {

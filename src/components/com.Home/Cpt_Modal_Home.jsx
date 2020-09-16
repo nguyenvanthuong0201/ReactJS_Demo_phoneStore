@@ -12,6 +12,7 @@ import PhoneIcon from "@material-ui/icons/Phone";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import RecentActorsIcon from "@material-ui/icons/RecentActors";
 import * as Message from "../../constants/Messages";
+import MessageChange from "../com.Message/MessageChange";
 
 
 class Cpt_Modal_Home extends Component {
@@ -29,9 +30,11 @@ class Cpt_Modal_Home extends Component {
     console.log(product);
     this.props.onAddToCart(product);
     this.props.onChangeMessage(Message.MSG_ADD_TO_CARD_SUCCESS);
+    this.props.onOpenSnackbar();
   };
   render() {
-    let { product, } = this.props;
+    let { product} = this.props;
+    
     return (
       <DialogContent dividers>
         <Paper elevation={3} className="ModalImgPage">

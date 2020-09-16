@@ -1,27 +1,40 @@
 import React, { Component } from "react";
-import { Snackbar } from "@material-ui/core";
+import { Button, IconButton, Snackbar } from "@material-ui/core";
+import CloseIcon from '@material-ui/icons/Close';
 
-export default class MessageChange extends Component {
+export default  class MessageChange extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        open:true,
       vertical: "bottom",
       horizontal: "left",
     };
   }
+  handleClose=()=>{
+   this.props.onCloseSnackBar()
+  } 
   render() {
-    let { message } = this.props;
-    let {vertical,horizontal,open}=this.state
+    let { message,bool} = this.props;
+    let { vertical, horizontal} = this.state;
     return (
-      <div>
+        <div>
         <Snackbar
           anchorOrigin={{ vertical, horizontal }}
-          open={open}
+          open={bool}
+          autoHideDuration={6000}
           message={message}
+          onClose={this.handleClose}
           key={vertical + horizontal}
+          action={
+            <React.Fragment>
+              <IconButton size="small" aria-label="close" color="inherit" onClick={this.handleClose}>
+                <CloseIcon fontSize="small" />
+              </IconButton>
+            </React.Fragment>
+          }
         />
       </div>
     );
   }
 }
+

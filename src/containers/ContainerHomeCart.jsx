@@ -4,11 +4,11 @@ import Cpt_HomeCart from '../components/com.Cart/Cpt_HomeCart';
 import * as message from '../constants/Messages'
 import Cpt_HomeCart_Item from '../components/com.Cart/Cpt_HomeCart_Item';
 import Cpt_HomeCart_Result from '../components/com.Cart/Cpt_HomeCart_Result';
-import { actDeleteProduct,actDeleteMessage, actUpdateCart, actUpdateMessage } from '../actions/indexActions';
+import { actDeleteProduct,actDeleteMessage, actUpdateCart, actUpdateMessage, actSnackbar } from '../actions/indexActions';
 
 class ContainerHomeCart extends Component {
     showCartItem=(cart)=>{
-        let{onDeleteCart,onDeleteMessage,onUpdateCart,onUpdateMessage}=this.props
+        let{onDeleteCart,onDeleteMessage,onUpdateCart,onUpdateMessage,onOpenSnackbar}=this.props
     let result=null;
     if(cart.length > 0 ){
         result = cart.map((item,index)=>{
@@ -20,6 +20,7 @@ class ContainerHomeCart extends Component {
                 onDeleteMessage={onDeleteMessage}
                 onUpdateCart={onUpdateCart}
                 onUpdateMessage={onUpdateMessage}
+                onOpenSnackbar={onOpenSnackbar}
                 />
             )
         })
@@ -34,7 +35,7 @@ class ContainerHomeCart extends Component {
         return result;
     }
     render() {
-        let{cart,cartSum}=this.props;
+        let{cart}=this.props;
         return (
                 <Cpt_HomeCart>
                 {this.showCartItem(cart)}
@@ -62,6 +63,9 @@ const mapDispatchToProps =(dispatch,props)=> {
         },
         onUpdateMessage:(message)=>{
             dispatch(actUpdateMessage(message))
+        },
+        onOpenSnackbar:()=>{
+            dispatch(actSnackbar())
         }
     }
 }

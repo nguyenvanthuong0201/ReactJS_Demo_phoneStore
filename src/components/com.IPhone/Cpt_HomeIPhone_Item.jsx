@@ -1,12 +1,15 @@
 import React, { Component } from "react";
 import Paper from "@material-ui/core/Paper";
-import Button from "@material-ui/core/Button";
 import * as Message from "../../constants/Messages";
 import Cpt_Modal_Home from "../com.Home/Cpt_Modal_Home";
 import Dialog from "@material-ui/core/Dialog";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogActions from "@material-ui/core/DialogActions";
+///
+import { Button, IconButton, Snackbar } from "@material-ui/core";
+import { SnackbarProvider, useSnackbar } from 'notistack';
+import CloseIcon from '@material-ui/icons/Close';
 
 class Cpt_HomeIPhone_Item extends Component {
   constructor(props) {
@@ -30,9 +33,10 @@ class Cpt_HomeIPhone_Item extends Component {
   onAddToCart = (product) => {
     this.props.onAddToCart(product);
     this.props.onChangeMessage(Message.MSG_ADD_TO_CARD_SUCCESS);
+    this.props.onOpenSnackbar();
   };
   render() {
-    let { product ,onAddToCart,onChangeMessage} = this.props;
+    let { product ,onAddToCart,onChangeMessage,onOpenSnackbar} = this.props;
     return (
       <Paper elevation={4} className="paperProductSmart">
         <div className="headerProductSmart">
@@ -54,14 +58,6 @@ class Cpt_HomeIPhone_Item extends Component {
           <div className="sale">{product.sale.toLocaleString()} ₫</div>
         </div>
         <div className="buttonSmart">
-          {/* <Button
-            variant="contained"
-            size="medium"
-            color="primary"
-            className="btn btn-primary seeInformationProduct"
-          >
-            Chi tiết
-          </Button> */}
           <Button
             variant="contained"
             size="medium"
@@ -88,6 +84,7 @@ class Cpt_HomeIPhone_Item extends Component {
               product={product}
               onAddToCart={onAddToCart}
               onChangeMessage={onChangeMessage}
+              onOpenSnackbar={onOpenSnackbar}
             />
             {/* End boby Modal */}
 

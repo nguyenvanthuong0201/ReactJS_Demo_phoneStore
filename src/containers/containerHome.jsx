@@ -3,13 +3,13 @@ import { connect } from "react-redux";
 // import { Splide, SplideSlide } from "@splidejs/react-splide";
 import Cpt_Home from '../components/com.Home/Cpt_Home'
 import Cpt_HomeProduct from '../components/com.Home/Cpt_Home_Product';
-import {actAddToCart,actChangeMessage, actOpenModal, } from "../actions/indexActions";
+import {actAddToCart,actChangeMessage, actSnackbar, } from "../actions/indexActions";
 
 
 
 class ContainerHome extends Component {
     showSplideProduct= (SplideProduct) => {
-      let {onAddToCart,onChangeMessage,actOpenModal} =this.props
+      let {onAddToCart,onChangeMessage,onOpenSnackbar,message} =this.props
         let products= SplideProduct;
         let result= null;
         if(products.length > 0){
@@ -19,7 +19,8 @@ class ContainerHome extends Component {
                 product={product}
                 onAddToCart={onAddToCart} 
                 onChangeMessage={onChangeMessage}
-                actOpenModal={actOpenModal} 
+                message={message}
+                onOpenSnackbar={onOpenSnackbar}
                 />
             )
           })
@@ -34,7 +35,8 @@ class ContainerHome extends Component {
 const mapStateToProps = (state) => {
     return {
       products: state.reHomeProducts,
-      boolModal : state.reModalProduct
+      message: state.reMessage,
+
     };
   };
   const mapDispatchToProps = (dispatch, props) => {
@@ -45,8 +47,8 @@ const mapStateToProps = (state) => {
       onChangeMessage:(message)=>{ 
         dispatch(actChangeMessage(message));
       },
-      onOpenModal: (product) =>{
-        dispatch(actOpenModal(product));
+        onOpenSnackbar:()=>{
+          dispatch(actSnackbar())
       }
     };
   };

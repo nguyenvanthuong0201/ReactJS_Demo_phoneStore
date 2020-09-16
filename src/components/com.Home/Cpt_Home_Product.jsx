@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import * as Message from "../../constants/Messages";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
-import Button from "@material-ui/core/Button";
 import Dialog from "@material-ui/core/Dialog";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import DialogContent from "@material-ui/core/DialogContent";
@@ -14,6 +13,11 @@ import PhoneIcon from "@material-ui/icons/Phone";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import RecentActorsIcon from "@material-ui/icons/RecentActors";
 import Cpt_Modal_Home from "./Cpt_Modal_Home";
+import MessageChange from '../../components/com.Message/MessageChange'
+import { Button, IconButton, Snackbar } from "@material-ui/core";
+import { SnackbarProvider, useSnackbar } from 'notistack';
+import CloseIcon from '@material-ui/icons/Close';
+
 
 export default class Cpt_HomeProduct extends Component {
   constructor(props) {
@@ -34,13 +38,14 @@ export default class Cpt_HomeProduct extends Component {
     });
   };
   onAddToCart = (product) => {
-    console.log(product);
     this.props.onAddToCart(product);
     this.props.onChangeMessage(Message.MSG_ADD_TO_CARD_SUCCESS);
+    this.props.onOpenSnackbar();
   };
 
   render() {
-    let { product,onAddToCart,onChangeMessage} = this.props;
+    let { product,onAddToCart,onChangeMessage,onOpenSnackbar} = this.props;
+    // let { openSnack,vertical, horizontal }=this.state;
     return (
       <SplideSlide>
         <div className="card cartHomeProduct">
@@ -79,9 +84,8 @@ export default class Cpt_HomeProduct extends Component {
                   {product.title}
                 </DialogTitle>
                 {/* Start boby Modal */}
-               <Cpt_Modal_Home product={product} onAddToCart={onAddToCart} onChangeMessage={onChangeMessage}/>
+               <Cpt_Modal_Home product={product} onAddToCart={onAddToCart} onChangeMessage={onChangeMessage} onOpenSnackbar={onOpenSnackbar}/>
                 {/* End boby Modal */}
-                
                 <DialogActions>
                   <Button
                     autoFocus
@@ -98,7 +102,7 @@ export default class Cpt_HomeProduct extends Component {
                 size="medium"
                 color="secondary"
                 className="btn btn-danger float-right"
-                onClick={() => this.onAddToCart(product)}
+                onClick={()=> this.onAddToCart(product)}
               >
                 Giỏ hàng
               </Button>

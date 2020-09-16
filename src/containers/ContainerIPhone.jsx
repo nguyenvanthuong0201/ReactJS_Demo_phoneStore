@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import Cpt_HomeIPhone from '../components/com.IPhone/Cpt_HomeIPhone';
 import Cpt_HomeIPhone_Item from '../components/com.IPhone/Cpt_HomeIPhone_Item';
-import { actAddToCart, actChangeMessage } from '../actions/indexActions';
+import { actAddToCart, actChangeMessage, actSnackbar } from '../actions/indexActions';
 
 
 class ContainerIPhone extends Component {
     showIPhone=(products)=>{
-        let {onAddToCart,onChangeMessage}= this.props
+        let {onAddToCart,onChangeMessage,onOpenSnackbar}= this.props
         let result = null;
         if(products.length > 0 ){
             result= products.map((product,index)=>{
@@ -16,7 +16,9 @@ class ContainerIPhone extends Component {
                     product={product}
                     key={index}
                     onChangeMessage={onChangeMessage} 
-                    onAddToCart={onAddToCart}/>
+                    onAddToCart={onAddToCart}
+                    onOpenSnackbar={onOpenSnackbar}
+                    />
                 )
             })
         }
@@ -41,6 +43,9 @@ const mapDispatchToProps =(dispatch,props)=> {
         },
         onChangeMessage:(message)=>{
             dispatch(actChangeMessage(message))
+        },
+        onOpenSnackbar:()=>{
+            dispatch(actSnackbar())
         }
     }
 }

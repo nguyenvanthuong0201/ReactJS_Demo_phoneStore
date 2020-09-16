@@ -8,7 +8,8 @@
         "cost":15000000,
         "promotion":" Đã sẵn hàng - giá tốt nhất Tp HCM",
         "new":true,
-        "installment":true
+        "installment":true,
+        "rating":3
     },
     {
         "id":22,
@@ -19,7 +20,9 @@
         "cost":7300000,
         "promotion":" Deal Hot-Khuyến mãi Sock",
         "new":true,
-        "installment":false
+        "installment":false,
+        "rating":4
+
     },
     {
         "id":23,
@@ -30,6 +33,7 @@
         "cost":14000000,
         "promotion":" Giá cực sốc-Quà tặng 2.000.000 đ",
         "new":true,
+        "rating":4,
         "installment":true
     },
     {
@@ -41,6 +45,7 @@
         "cost":"",
         "promotion":" Deal Hot-Khuyến mãi Sock",
         "new":true,
+        "rating":4,
         "installment":true
     },
     {
@@ -51,6 +56,7 @@
         "sale":8000000,
         "cost":11500000,
         "promotion":" Deal Hot-Khuyến mãi Sock",
+        "rating":2,
         "new":true,
         "installment":true
     },
@@ -62,6 +68,7 @@
         "sale":8900000,
         "cost":1000000,
         "promotion":" Sản phẩm bán chạy ,quà tặng BHV trị giá 700,000 đ",
+        "rating":4,
         "new":false,
         "installment":true
     },
@@ -71,6 +78,7 @@
         "alt":"ảnh 1",
         "title":"Apple iPhone XR plus Lock",
         "sale":9400000,
+        "rating":5,
         "cost":10000000,
         "promotion":" Sản phẩm bán chạy ,quà tặng BHV trị giá 700,000 đ",
         "new":false,
@@ -79,6 +87,7 @@
     {
         "id":28,
         "img":"img/iphone8.png",
+        "rating":3,
         "alt":"ảnh 2",
         "title":"IPad 9.7 2017 - Gen 5-32Gb",
         "sale":6000000,
@@ -95,6 +104,7 @@
         "sale":15000000,
         "cost":14000000,
         "promotion":"",
+        "rating":5,
         "new":true,
         "installment":true
     },
@@ -106,6 +116,7 @@
         "sale":15000000,
         "cost":14000000,
         "promotion":"Sản phẩm bán chạy ,quà tặng BHV trị giá 700,000 đ",
+        "rating":5,
         "new":true,
         "installment":true
     },
@@ -117,6 +128,7 @@
         "sale":15000000,
         "cost":14000000,
         "promotion":"",
+        "rating":5,
         "new":true,
         "installment":true
     },
@@ -128,6 +140,7 @@
         "sale":15000000,
         "cost":14000000,
         "promotion":"Sản phẩm bán chạy ,quà tặng BHV trị giá 700,000 đ",
+        "rating":3,
         "new":true,
         "installment":true
     },
@@ -139,6 +152,7 @@
         "sale":15000000,
         "cost":14000000,
         "promotion":"",
+        "rating":3,
         "new":true,
         "installment":true
     },
@@ -150,6 +164,7 @@
         "sale":15000000,
         "cost":14000000,
         "promotion":" Sản phẩm bán chạy ,quà tặng BHV trị giá 700,000 đ",
+        "rating":5,
         "new":true,
         "installment":true
     },
@@ -161,6 +176,7 @@
         "sale":15000000,
         "cost":14000000,
         "promotion":"",
+        "rating":4,
         "new":true,
         "installment":true
     }

@@ -8,6 +8,7 @@ import { IconButton, Modal } from "@material-ui/core";
 import Message from "./components/com.Message/Message";
 import ContainerMessage from "./containers/ContainerMessage";
 import ContainerHeaderCart from "./containers/ContainerHeaderCart";
+import MessageChange from "./components/com.Message/MessageChange";
 
 class App extends Component {
   showContent=(routes)=>{
@@ -26,7 +27,6 @@ class App extends Component {
       <Router>
         <div>
           <ContainerHeaderCart/>
-          <Message/>
           <div className="container">
           <Switch>{this.showContent(routes)}</Switch>
           </div>
