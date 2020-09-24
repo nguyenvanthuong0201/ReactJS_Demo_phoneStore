@@ -49,5 +49,61 @@ export const actSnackbarClose=()=>{
         type: types.OPEN_SNACKBAR_CLOSE
     }
 }
+export const actAddCustomer=(customer)=>{
+    return{
+        type: types.ADD_CUSTOMER,
+        customer
+    }
+}
+export const actCloseDrawerRes=()=>{
+    return{
+        type: types.CLOSE_DRAWER_RES
+    }
+}
+export const actOpenDrawerRes=()=>{
+    return{
+        type: types.OPEN_DRAWER_RES
+    }
+}
+export const actCloseDrawerLog=()=>{
+    return{
+        type: types.CLOSE_DRAWER_LOG
+    }
+}
+export const actOpenDrawerLog=()=>{
+    return{
+        type: types.OPEN_DRAWER_LOG
+    }
+}
+export const actLogin=(customer)=>{
+    return{
+        type: types.LOGIN,
+        customer
+    }
+}
+export const actLoginButton=()=>{
+    return{
+        type: types.ACTION_LOGIN,
+    }
+}
+export const actLogoutButton=()=>{
+    return{
+        type: types.ACTION_LOGOUT,
+    }
+}
+export const actPayAddProduct=(cart)=>{
+    return{
+        type: types.PAY_PRODUCT,
+        cart,
+    }
+}
+export const actDeleteAllCart=()=>{
+    return{
+        type: types.DELETE_ALL_CART,
+    }
+}
+
+
+
 
 

@@ -10,6 +10,9 @@ import Cpt_NotFound from '../components/com.NotFound/Cpt_NotFound'
 import ContainerHome from '../containers/ContainerHome'
 import ContainerHomeCart from '../containers/ContainerHomeCart';
 import ContainerIPhone from '../containers/ContainerIPhone'
+import ContainerPay from '../containers/ContainerPay'
+import Cpt_Account from '../components/com.Account/Cpt_Account'
+import ContainerAccount from '../containers/ContainerAccount'
 
 const routers=[
     {
@@ -51,6 +54,16 @@ const routers=[
         path:"/tablet",
         exact:false,
         main:()=> <Cpt_HomeTablet/>
+    },
+    {
+        path:"/pay",
+        exact:false,
+        main:()=> <ContainerPay/>
+    },  
+    {
+        path:"/account",
+        exact:false,
+        main:()=> <ContainerAccount/>
     },  
     {           // 404 phải  đặt dưới cùng 
         path:"",

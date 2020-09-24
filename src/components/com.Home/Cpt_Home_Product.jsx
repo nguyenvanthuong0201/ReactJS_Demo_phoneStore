@@ -56,7 +56,7 @@ export default class Cpt_HomeProduct extends Component {
               <span className="float-left">
                 {product.sale.toLocaleString()} ₫
               </span>
-              <span className="float-right sale">
+              <span className="float-right saleHome">
                 {product.cost.toLocaleString()} {product.cost ? "₫" : ""}
               </span>
             </div>

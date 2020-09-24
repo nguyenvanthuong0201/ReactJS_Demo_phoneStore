@@ -1,12 +1,12 @@
 import * as types from '../constants/ActionTypes'
 let initialState=  false;
-let reSnackProduct =(state=initialState,action)=>{
+let reHeaderDrawer =(state=initialState,action)=>{
     switch (action.type) {
-        case types.OPEN_SNACKBAR:
+        case types.OPEN_DRAWER_RES:
             return true
-        case types.OPEN_SNACKBAR_CLOSE:   /// lỡ dại đặt tên  ^_^ 
+        case types.CLOSE_DRAWER_RES:  
             return false
         default: return state
     }
 }
-export default reSnackProduct
+export default reHeaderDrawer

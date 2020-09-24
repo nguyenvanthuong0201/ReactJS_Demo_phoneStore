@@ -7,6 +7,7 @@ const reHomeCart = (state=initialState,action)=>{
     let index= -1 /// -1 có nghĩa là không tìm thấy;
     switch (action.type) {
         case types.ADD_TO_CARD:
+            console.log(action)
         index = findProductInCart(state,product)    /// tìm vị trí sản phẩm khi mình bấm vào sản phẩm mình chọn
         if(index !== -1){          /// nếu tìm thấy
         state[index].quantity += quantity;     // cộng dồn sản phẩm
@@ -33,10 +34,17 @@ const reHomeCart = (state=initialState,action)=>{
         localStorage.setItem("store",JSON.stringify(state));
         return [...state];
 
+        case types.DELETE_ALL_CART:
+            state.splice(0,state.length);
+            localStorage.setItem("store",JSON.stringify(state));
+            console.log(action)
+            return [...state];
+
     default: return [...state];
     
     }
 }
+
 const findProductInCart = (cart,product) => {
     let index = -1 ; // -1 có nghĩa là không tìm thấy 
     if(cart.length > 0){

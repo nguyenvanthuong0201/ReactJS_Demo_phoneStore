@@ -12,7 +12,6 @@ class Cpt_HomeCart_Item extends Component {
       quantity : 1,
     }
   }
-  
   sumTotal=(sale,quantity)=>{
     return (sale*quantity).toLocaleString();
   }
@@ -33,6 +32,7 @@ class Cpt_HomeCart_Item extends Component {
   }
   render() {
     let { item } = this.props;
+    console.log(item.title)
     return (
       <tr className="cartProduct_tr">
         <td>
@@ -43,7 +43,7 @@ class Cpt_HomeCart_Item extends Component {
         <td className="cartImg">
           <img src={item.product.img} alt={item.product.alt} />
         </td>
-        <td>{item.title}</td>
+        <td className="cartItemTitle">{item.product.title}</td>
         <td className="cost">{(item.product.sale).toLocaleString()} ₫</td>
         <td className="cartAddRemove">
           <IconButton className="cartButtonRemove" onClick={()=>this.onUpdateCart(item.product,item.quantity - 1)}>
@@ -54,7 +54,7 @@ class Cpt_HomeCart_Item extends Component {
             <AddCircleIcon />
           </IconButton>
         </td>
-        <td className="cost">{this.sumTotal(item.product.sale,item.quantity)} ₫</td>
+        <td className="cost costSum">{this.sumTotal(item.product.sale,item.quantity)} ₫</td>
       </tr>
     );
   }

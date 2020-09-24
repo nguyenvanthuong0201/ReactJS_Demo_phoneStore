@@ -13,6 +13,7 @@ import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import RecentActorsIcon from "@material-ui/icons/RecentActors";
 import * as Message from "../../constants/Messages";
 import MessageChange from "../com.Message/MessageChange";
+import { Link } from "react-router-dom";
 
 
 class Cpt_Modal_Home extends Component {
@@ -70,10 +71,10 @@ class Cpt_Modal_Home extends Component {
                     onClick={() => this.onAddToCart(product)}
                   >
                     <ShoppingCartIcon />
-                    <div className="contentCard">
+                   <Link to="/cart"> <div className="contentCard">
                       Mua ngay <br />
                       Giao hàng tận nơi
-                    </div>
+                    </div> </Link>
                   </Button>
                   <Button
                     variant="contained"
@@ -82,9 +83,9 @@ class Cpt_Modal_Home extends Component {
                     className="btn btn-danger float-right buttonBuyRight"
                   >
                     <RecentActorsIcon />
-                    <div className="contentCard">
+                   <Link to="/pay"> <div className="contentCard" onClick={() => this.onAddToCart(product)}>
                       Mua trả góp <br /> xet duyệt online
-                    </div>
+                    </div></Link>
                   </Button>
                 </div>
                 <div className="RegistrationModal">
@@ -93,8 +94,9 @@ class Cpt_Modal_Home extends Component {
                     label="Tư vấn qua số điện thoại"
                     variant="outlined"
                     type="number"
-                    className="textFieldModal"
-                  />
+                    className="textFieldModalProduct"
+                    InputProps={{ inputProps: { min: 1, max: 10 } }}       
+                   />
                   <Button
                     variant="contained"
                     size="medium"

@@ -1,5 +1,10 @@
-export const MSG_ADD_TO_CARD_SUCCESS="Mua hàng thành công !";
+export const MSG_ADD_TO_CARD_SUCCESS="Thêm vào giỏ hàng thành công !";
 export const MSG_UPDATE_CARD_SUCCESS="Cập nhật giỏ hàng thành công !";
 export const MSG_DELETE_CARD_SUCCESS="Xóa sản phẩm khỏi giỏ hàng thành công !";
 export const MSG_CARD_EMPTY="Chưa có sản phẩm nào trong giỏ hàng !";
 export const MSG_WELCOME = "Chào mừng đến Shopping Online !";
+export const MSG_ADD_CUSTOMER_SUCCESS="Đăng ký thành công"
+export const MSG_LOGIN_SUCCESS="đăng nhập thành công"
+export const MSG_LOGIN_FAIL="đăng nhập thất bại"
+export const MSG_LOGOUT_SUCCESS="Đăng Xuất"
+export const MSG_PAY_SUCCESS="Thanh toán thành công"

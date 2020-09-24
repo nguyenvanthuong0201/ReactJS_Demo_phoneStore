@@ -1,391 +1,738 @@
-
-
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
-body{
-    background-color: #5c6bc0;
+body {
+  background-color: #5c6bc0;
 }
 .backgroundHeader {
-    background-color: #5c6bc0;
+  background-color: #5c6bc0;
 }
 button.MuiButtonBase-root.MuiIconButton-root.iconSearch.MuiIconButton-colorInherit {
-    margin-left: -50px;
-    width: 40px;
-    height: 30px;
+  margin-left: -50px;
+  width: 40px;
+  height: 30px;
 }
-.navbar-brand img{
-    width: 130px;
+.navbar-brand img {
+  width: 130px;
 }
 input.form-control.mr-sm-2 {
-    height: 30px;
+  height: 30px;
 }
 span.MuiButton-label {
-    color: white;
-    font-size: 11px;
+  color: white;
+  font-size: 11px;
 }
 nav.navbar.navbar-expand-sm.navbar-dark {
-    padding: 0px;
+  padding: 0px;
 }
 button.MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-colorInherit {
-    background-color: darkslateblue;
+  background-color: darkslateblue;
 }
 ul.navbar-nav.mr-auto.mt-2.mt-lg-0.text-center {
-    margin-left: 40px;
-    text-transform: uppercase;
+  margin-left: 40px;
+  text-transform: uppercase;
 }
 li.nav-item.active {
-    background-color: darkslateblue;
+  background-color: darkslateblue;
 }
-.carousel-item img{
-    width: 730px;
-    height: 320px;
-    background-size: cover;
-    background-repeat: no-repeat;
+.carousel-item img {
+  width: 730px;
+  height: 320px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-.bannerLeft img{
-    width: 350px;
-    height: 150px;
+.bannerLeft img {
+  width: 350px;
+  height: 150px;
 }
-.bannerLeft img:first-child{
-    margin-bottom: 20px;
+.bannerLeft img:first-child {
+  margin-bottom: 20px;
 }
 h3.text-center {
-    background-color: darkslateblue;
-    color: #ebe7e7;
-    margin: 0px;
+  background-color: darkslateblue;
+  color: #ebe7e7;
+  margin: 0px;
 }
 div#splide1,
-div#splide2
-{
-    padding: 0px;
+div#splide2 {
+  padding: 0px;
 }
-div#splide2
-{
-    height: 400px;
+div#splide2 {
+  height: 400px;
 }
 
-.wrapper img{
-    width: 360px;
-    height: 150px;
-    background-size: cover;
+.wrapper img {
+  width: 360px;
+  height: 150px;
+  background-size: cover;
 }
-.wrapper2{
-    height: 425px;
-    border: solid 1px darkslateblue;
+.wrapper2 {
+  height: 425px;
+  border: solid 1px darkslateblue;
 }
-.wrapper2 img{
-    height: 298px;
-    border:solid 1px #e5e5e5;
+.wrapper2 img {
+  height: 298px;
+  border: solid 1px #e5e5e5;
 }
-.wrapper2 .card-body{
-    height: 122px;
+.wrapper2 .card-body {
+  height: 122px;
 }
 
 ul.splide__pagination {
-    display: none;
+  display: none;
 }
 .backgroundFooter {
-    background-color: #e5e5e5;
-    margin-top: 50px;
+  background-color: #e5e5e5;
+  margin-top: 50px;
 }
 .copyRight {
-    text-align: center;
+  text-align: center;
 }
 .container.footer {
-    padding-top: 50px;
+  padding-top: 50px;
 }
 .copyRight p {
-    margin: 0px;
-    margin-top: 10px;
-    background-color: #fefefe;
-    font-size: 12px;
-
+  margin: 0px;
+  margin-top: 10px;
+  background-color: #fefefe;
+  font-size: 12px;
 }
 .footer a {
-    text-decoration: none;
-    color: black;
-    font-size: 12px;
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
 }
-.wrapper2 .card h4{
-    font-size: 16px;
-    margin-top: -10px;
+.wrapper2 .card h4 {
+  font-size: 16px;
+  margin-top: -10px;
 }
 .wrapper2 .card .card-text .sale {
-    color: #666161c9;
-    text-decoration: line-through;
+  color: #666161c9;
+  text-decoration: line-through;
 }
 span.float-left {
-    font-weight: bold;
-    color: red;
+  font-weight: bold;
+  color: red;
 }
 button.MuiButtonBase-root.MuiIconButton-root.onTop {
-    background-color: darkslateblue;
-    width: 15px;
-    height: 15px;
-    position: fixed;
-    bottom: 10%;
-    right: 1%;
-    transition: 1s;
+  background-color: darkslateblue;
+  width: 15px;
+  height: 15px;
+  position: fixed;
+  bottom: 10%;
+  right: 1%;
+  transition: 1s;
 }
 button.MuiButtonBase-root.MuiIconButton-root.icon {
-    transition: 1s;
+  transition: 1s;
 }
 td.cartImg img {
-    width: 50px;
+  width: 40px;
 }
 
 .cartProduct_tr td {
-    line-height: 50px;
+  line-height: 50px;
 }
-td.cost {font-weight: 500;color: red;}
+td.cost {
+  font-weight: 500;
+  color: red;
+}
 button.MuiButtonBase-root.MuiIconButton-root.cartButtonDelete {
-    color: red;
+  color: red;
 }
 .col-sm-10 {
-    padding: 0;
+  padding: 0;
 }
 
 .col-sm-2 {
-    padding: 0;
+  padding: 0;
 }
 p.card-text {
-    text-align: center;
-    color: red;
-    font-weight: 600;
+  text-align: center;
+  color: red;
+  font-weight: 600;
 }
 
 .card {
-    overflow: hidden;
+  overflow: hidden;
 }
 .card-text.cartButton {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .card-text.cartButton {
-    visibility: hidden;
-    opacity: 0;
-    transition: 0.5s;
-    transform: translateX(50px);
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  transform: translateX(50px);
 }
 
 .card:hover .card-text.cartButton {
-    visibility: visible;
-    opacity: 1;
-    transition: 0.5s;
-    transform: translateX(0px);
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+  transform: translateX(0px);
 }
-.card:hover img.card-img-top{
-    transform: scale(1.1);
-    transition: 0.5s;
-    border-bottom: none;
+.card:hover img.card-img-top {
+  transform: scale(1.1);
+  transition: 0.5s;
+  border-bottom: none;
 }
 img.card-img-top {
-    transform: scale(1);
-    transition: 0.5s;
-    overflow: hidden;
+  transform: scale(1);
+  transition: 0.5s;
+  overflow: hidden;
 }
 .MuiAlert-message {
-    margin-left: 38%;
-    font-size: 20px;
+  margin-left: 38%;
+  font-size: 20px;
 }
 .IPhoneCartContent {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .MuiPaper-root.MuiPaper-elevation4.MuiPaper-rounded {
-    width: 20%;
-    height: 100px;
-    border: 1px solid rgb(192, 192, 192);
-    border-radius: none;
-
+  width: 20%;
+  height: 100px;
+  border: 1px solid rgb(192, 192, 192);
+  border-radius: none;
 }
 .rowHeaderIphone img {
-    width: 540px;
+  width: 540px;
 }
 .rowTilteIphone h5 {
-    background-color:#5c6bc0;
-    margin: 0px;
-    color: #fefefe;
-    padding-left: 50px;
+  background-color: #5c6bc0;
+  margin: 0px;
+  color: #fefefe;
+  padding-left: 50px;
 }
 .MuiPaper-root.paperProductSmart.MuiPaper-elevation4.MuiPaper-rounded {
-    position: relative;
-    width: 20%;
-    height: 350px;
+  position: relative;
+  width: 20%;
+  height: 350px;
 }
 
 .productNew {
-    position: absolute;
-    top: 1%;
-    left: 2%;
-    background: green;
-    opacity: 0.8;
-    border-radius: 5px;
-    color: #fefefe;
-    z-index: 99;
-    padding: 0px;
-    font-size: 12px;
-    font-weight: 500;
+  position: absolute;
+  top: 1%;
+  left: 2%;
+  background: green;
+  opacity: 0.8;
+  border-radius: 5px;
+  color: #fefefe;
+  z-index: 99;
+  padding: 0px;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .productInstallment {
-    position: absolute;
-    top: 1%;
-    left: 70%;
-    background: coral;
-    opacity: 0.8;
-    border-radius: 5px;
-    color: #fefefe;
-    z-index: 999;
-    font-size: 12px;
-    font-weight: 500;
+  position: absolute;
+  top: 1%;
+  left: 70%;
+  background: coral;
+  opacity: 0.8;
+  border-radius: 5px;
+  color: #fefefe;
+  z-index: 999;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .headerProductSmart img {
-    width: 222px;
-    position: absolute;
-    z-index: 1;
-    position: absolute;
-    top: 2px;
+  width: 222px;
+  position: absolute;
+  z-index: 1;
+  position: absolute;
+  top: 2px;
 }
 
 .productTitle {
-    position: absolute;
-    bottom: 32%;
-    font-size: 12px;
-    /* padding: 5px 5px; */
-    background-color: red;
-    opacity: 0.8;
-    border-radius: 10px;
-    color: #fefefe;
-    font-weight: 500;
-    z-index: 999;
-    margin: 0px 5px;
+  position: absolute;
+  bottom: 32%;
+  font-size: 12px;
+  /* padding: 5px 5px; */
+  background-color: red;
+  opacity: 0.8;
+  border-radius: 10px;
+  color: #fefefe;
+  font-weight: 500;
+  z-index: 999;
+  margin: 0px 5px;
 }
 
 .contentProductSmart {
-    position: absolute;
-    bottom: 15%;
+  position: absolute;
+  bottom: 15%;
 }
 
-.contentProductSmart h6 {margin: 0px 10px;font-size: 14px;}
+.contentProductSmart h6 {
+  margin: 0px 10px;
+  font-size: 14px;
+}
 
 .sale {
-    text-align: center;
-    font-weight: 600;
-    color: red;
+  text-align: center;
+  font-weight: 600;
+  width: 220px;
+  color: red;
 }
 button.btn.btn-danger.CartProductPhone {
-    position: absolute;
-    width: 101px;
-    bottom: 2%;
-    right: 2%;
-    height: 9%;
+  position: absolute;
+  width: 101px;
+  bottom: 2%;
+  right: 2%;
+  height: 9%;
 }
 button.btn.btn-primary.seeInformationProduct {
-    position: absolute;
-    bottom: 2%;
-    bottom: 2%;
-    left: 2%;
-    font-size: 14px;
+  position: absolute;
+  bottom: 2%;
+  bottom: 2%;
+  left: 2%;
+  font-size: 14px;
 }
 .headerProductSmart:hover img {
-    transform: scale(1.1);
-    transition: 0.5s;
-    z-index: 9999;
+  transform: scale(1.1);
+  transition: 0.5s;
+  z-index: 9999;
 }
 .MuiDialogContent-root.MuiDialogContent-dividers {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 .MuiPaper-root.ModalImgPage.MuiPaper-elevation3.MuiPaper-rounded {
-    width: 380px;
-    height: 440px;
+  width: 380px;
+  height: 440px;
 }
 
 .MuiPaper-root.ModalInformationPage.MuiPaper-elevation3.MuiPaper-rounded {
-    width: 700px;
+  width: 700px;
 }
-.ModalImgPage img{
-    width: 380px;
-    height: 400px;
+.ModalImgPage img {
+  width: 380px;
+  height: 400px;
 }
-.ModalImgPage hr{
-    margin: 0;
+.ModalImgPage hr {
+  margin: 0;
 }
 .assess {
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    color: goldenrod;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: goldenrod;
 }
 button.MuiButtonBase-root.MuiButton-root.MuiButton-text.btnCloseModal.MuiButton-textSecondary {
-    width: 160px;
-    background: currentColor;
+  width: 160px;
+  background: currentColor;
 }
 
 h2.MuiTypography-root.MuiTypography-h6 {
-    font-size: 25px;
-    padding-left: 30px;
+  font-size: 25px;
+  padding-left: 30px;
 }
 .colLeft img {
-    width: 380px;
+  width: 380px;
 }
 .colLeft img {
-    width: 380px;
+  width: 380px;
 }
 
 .costProductModal .sale {
-    font-size: 30px;
-    width: 200px;
+  font-size: 30px;
+  width: 200px;
 }
 .costProductModal {
-    height: 60px;
-    line-height: 60px;
-    display: flex;
-    flex-direction: row;
+  height: 60px;
+  line-height: 60px;
+  display: flex;
+  flex-direction: row;
 }
 .costModal {
-    width: 115px;
+  width: 115px;
 }
 
 .installmentModal {
-    width: 113px;
+  width: 113px;
 }
 .contentCard {
-    text-align: left;
-    margin-left: 10px;
+  text-align: left;
+  margin-left: 10px;
 }
 button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.btn.btn-danger.float-left.buttonBuyLeft.MuiButton-containedSecondary {
-    width: 185px;
+  width: 185px;
 }
 
 button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.btn.btn-danger.float-right.buttonBuyRight.MuiButton-containedPrimary {
-    width: 185px;
+  width: 185px;
 }
 .RegistrationModal {
-    margin-top: 85px;
+  margin-top: 85px;
 }
 
-input#outlined-basic {width: 350px;height: 5px;}
+input#outlined-basic {
+  width: 350px;
+  height: 5px;
+  width: 100%;
+}
 
 button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.btn.btn-danger.buttonRegistration {
-    width: 377px;
-    background-color: darkgreen;
+  width: 377px;
+  background-color: darkgreen;
 }
 .cardModal hr {
-    margin: 0px;
+  margin: 0px;
 }
 p.card-text.textModal {
-    font-size: 11px;
-    text-align: left;
-    margin: 0px 0px 5px;
+  font-size: 11px;
+  text-align: left;
+  margin: 0px 0px 5px;
 }
 .card-body.bodyModal {
-    padding: 10px;
+  padding: 10px;
 }
-span.costModalSpan {text-decoration: line-through;color: gray;}
+span.costModalSpan {
+  text-decoration: line-through;
+  color: gray;
+}
 
+.fontSize a.nav-link {
+  font-size: 11px;
+}
+button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.btn.btn-primary.user.MuiButton-containedPrimary {
+  width: 100px;
+}
+
+button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.btn.btn-danger.user.MuiButton-containedSecondary {
+  width: 100px;
+}
+h4.card-title.titleRegister {
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: solid 2px gray;
+}
+.contentRegister input#outlined-basic {
+  width: 530px;
+}
+.contentRegister .MuiFormControl-root.MuiTextField-root {
+  margin-bottom: 15px;
+}
+button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.btn.btn-primary.registerDrawer.MuiButton-containedPrimary {
+  width: 200px;
+  margin-left: 50px;
+}
+
+button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.btn.btn-danger.registerDrawer.MuiButton-containedSecondary {
+  width: 200px;
+  float: right;
+  margin-right: 50px;
+}
+.MuiInputBase-root.MuiOutlinedInput-root.MuiInputBase-formControl.MuiInputBase-adornedEnd.MuiOutlinedInput-adornedEnd {
+  height: 45px;
+}
+.MuiPaper-root.paperRes.MuiPaper-elevation3.MuiPaper-rounded {
+  width: 600px;
+}
+.MuiPaper-root.paperLog.MuiPaper-elevation3.MuiPaper-rounded {
+  width: 400px;
+}
+button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.btn.btn-danger.loginDrawer.MuiButton-containedSecondary {
+  margin-right: 15px;
+  float: right;
+  width: 150px;
+}
+button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.btn.btn-primary.loginDrawer.MuiButton-containedPrimary {
+  margin-left: 15px;
+  width: 150px;
+}
+.MuiFormControl-root.MuiTextField-root.txtEmailLog {
+  width: 355px;
+  margin-bottom: 15px;
+}
+.MuiFormControl-root.MuiTextField-root.txtPasswordLog {
+  width: 355px;
+  margin-bottom: 20px;
+}
+
+#simple-menu .MuiPaper-root {
+    width: 115px;
+    margin-left: auto;
+    position: initial;
+    margin-right: 135px;
+}
+button.MuiButtonBase-root.MuiIconButton-root.iconUserLoginHead.MuiIconButton-colorInherit {
+  margin-right: 0px;
+  float: left;
+}
+span.float-right.saleHome {
+  color: gray;
+  text-decoration: line-through;
+}
+svg.MuiSvgIcon-root.iconButtonLogin {
+  color: white;
+}
+li.MuiButtonBase-root.MuiListItem-root.MuiMenuItem-root.menuLogout.MuiMenuItem-gutters.MuiListItem-gutters.MuiListItem-button {
+  background-color: orangered;
+}
+li.MuiButtonBase-root.MuiListItem-root.MuiMenuItem-root.menuAccount.MuiMenuItem-gutters.MuiListItem-gutters.MuiListItem-button {
+  background-color: aliceblue;
+}
+a.linkToPay {text-decoration: none;color: black;background-color: aliceblue;}
+
+li.MuiButtonBase-root.MuiListItem-root.MuiMenuItem-root.menuPayButton.MuiMenuItem-gutters.MuiListItem-gutters.MuiListItem-button {
+    background-color: aliceblue;
+    text-decoration: none;
+}
+a.linkToPay:hover {text-decoration: none; color: black; background-color: coral;}
+.payInformation{
+  padding: 20px;
+}
+.textFieldPay {
+  display: flex;
+  flex-wrap: wrap;
+}
+.MuiFormControl-root.MuiTextField-root.userName {
+  width: 325px;
+  margin-right: 20px;
+}
+
+.MuiFormControl-root.MuiTextField-root.phone {
+  width: 325px;
+  margin-bottom: 10px;
+}
+.email,.address{
+  width: 100%;
+  margin-bottom: 10px;
+}
+.MuiFormControl-root.MuiTextField-root.email {
+  margin-bottom: 10px;
+}
+.MuiFormControl-root.MuiTextField-root.userNameOther {
+  margin-bottom: 10px;
+  width: 310px;
+  margin-right: 18px;
+}
+
+.MuiFormControl-root.MuiTextField-root.phoneOther {
+  width: 310px;
+  margin-bottom: 10px;
+}
+a.payBackToHome {
+  margin: 20px;
+  display: block;
+}
+
+thead.thead-inverse {
+  background-color: #5c6bc0;
+  color: white;
+  margin-top: 22px;
+  display: block;
+}
+tr.rowPayItem {
+  line-height: 50px;
+}
+.MuiPaper-root.MuiAccordion-root.MuiAccordion-rounded.MuiPaper-elevation1.MuiPaper-rounded {
+  background-color: gainsboro;
+}
+td.resultSumCart {
+  float: right;
+}
+
+td.rowSumPay {
+  color: red;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+td.resultSumCart {
+  font-size: 15px;
+  color: red;
+  font-weight: bold;
+  width: 100%;
+}
+td.titleSumCart {
+  font-size: 17px;
+  font-weight: 500;
+}
+td.resultSumCartFree {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+td.resultSumCartEnd {
+  font-size: 20px;
+  color: red;
+  font-weight: 700;
+}
+button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.btn.btn-danger.btn-block.payButtonSum.MuiButton-containedSecondary {
+  margin-top: 30px;
+}
+.HeaderIconUsername {
+  display: flex;
+}
+
+h6.HeaderUserNameLogin {
+  margin-top: 14px;
+  margin-right: 50px;
+}
+.buttonBuy a {
+  color: white;
+}
+.buttonBuy a:hover {
+  text-decoration: none;
+  color: white;
+}
+.MuiFormControl-root.MuiTextField-root.textFieldModalProduct {
+  width: 378px;
+}
+a.noneStyle:hover{
+  text-decoration: none;
+}
+.form-group.preview img {
+  width: 100px;
+}
+
+.form-group.preview {
+  width: 100px;
+  float: left;
+}
+
+.accountUserNameLogin h5 {
+  padding-top: 20px;
+}
+.MuiButtonBase-root.MuiListItem-root.accountDangXuat.MuiListItem-gutters.MuiListItem-button {
+  background-color: orangered;
+}
+.MuiButtonBase-root.MuiListItem-root.accountDonMua.MuiListItem-gutters.MuiListItem-button {
+  background-color: cornflowerblue;
+}
+
+.MuiButtonBase-root.MuiListItem-root.accountTaiKhoan.MuiListItem-gutters.MuiListItem-button {
+  background-color: bisque;
+}
+label.accountLabel {
+  margin: -5px 172px -10px 21px;
+}
+.form-group.preview img {
+  width: 100px;
+  height: 100px;
+  padding-right: 10px;
+  border-radius: 50%;
+}
+.accountTableSTT,.accountColSTT{
+  width: 10%;
+}
+.accountTableMatHang,.accountColMatHang{
+  width: 67%;
+}
+th.accountTableTongTien,.accountColTongTien {
+  width: 164px;
+}
+th.cartColClose {
+  width: 50px;
+}
+
+th.cartColProduct {
+  width: 230px;
+}
+
+th.cartColCost {
+  width: 100px;
+}
+button.MuiButtonBase-root.MuiIconButton-root.cartButtonDelete {
+  width: 0px;
+}
+
+td.cartItemTitle {
+  font-size: 13px;
+}
+
+th.cartColProduct {
+  width: 181px;
+}
+
+th.cartColCost {
+  width: 113px;
+}
+
+th.cartColNumber {
+  width: 181px;
+}
+td.cartItemTitle {
+  width: 210px;
+}
+td.accountColMatHang {
+  font-size: 13px;
+}
+
+td.accountColTongTien {
+  font-size: 18px;
+  color: red;
+  font-weight: 500;
+}
+h5.accountUserName {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+td.cartImg {
+  padding: 0;
+}
+td.cartAddRemove {
+  padding-left: 0px;
+}
+td.cost {
+  width: 115px;
+}
+td.cost.costSum {
+  width: 138px;
+}
+td.cartAddRemove {
+  width: 147px;
+}
+.payModel {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.MuiPaper-root.payModel__informationUser.MuiPaper-elevation3.MuiPaper-rounded {
+  width: 400px;
+}
+
+.MuiPaper-root.payModel__informationProduct.MuiPaper-elevation3.MuiPaper-rounded {
+  width: 500px;
+}
+
+.payModel__informationUser h4 {
+  text-align: center;
+}
+
+.payModel__informationProduct h4 {
+  text-align: center;
+}
+h2.payInformation_TitleModal {
+  text-align: center;
+}
+th.tableColSum.text-left {
+    width: 250px;
+}
+td.rowSalePay {
+  width: 410px;
+}
+th.tableColProduct.text-left {
+  width: 605px;
+}
+td.rowSalePayModel {
+  width: 350px;
+}
+
+td.rowSumPayModel {width: 150px;}
+h2.payModel__informationUser-sumTotal {
+  color: red;
+  font-weight: 600;
+}
+.payModel__informationUserContent{
+  padding-left: 20px;
+}

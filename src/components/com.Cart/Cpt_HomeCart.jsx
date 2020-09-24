@@ -1,11 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-// import ClearIcon from "@material-ui/icons/Clear";
-// import { IconButton } from "@material-ui/core";
-// import AddCircleIcon from "@material-ui/icons/AddCircle";
-// import RemoveCircleIcon from "@material-ui/icons/RemoveCircle";
-// import Cpt_HomeCart_Item from "./Cpt_HomeCart_Item";
-// import Cpt_HomeCart_Result from "./Cpt_HomeCart_Result";
+
 
 class Cpt_HomeCart extends Component {
   render() {
@@ -19,12 +14,12 @@ class Cpt_HomeCart extends Component {
               {this.props.children[0]?<table className="table table-striped table-inverse table-responsive">
                 <thead className="thead-inverse">
                   <tr>
-                    <th></th>
-                    <th>Hình ảnh</th>
-                    <th>Sản phẩm</th>
-                    <th>Giá</th>
-                    <th>Số lượng</th>
-                    <th>Tạm tính</th>
+                    <th  className="cartColClose"></th>
+                    <th className="cartColPicture">Hình ảnh</th>
+                    <th className="cartColProduct">Sản phẩm</th>
+                    <th className="cartColCost">Giá</th>
+                    <th className="cartColNumber">Số lượng</th>
+                    <th className="cartColSumTotal">Tạm tính</th>
                   </tr>
                 </thead>
                 <tbody className="cartProduct">

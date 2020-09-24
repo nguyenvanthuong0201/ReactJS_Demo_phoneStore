@@ -21,7 +21,7 @@ export default  class MessageChange extends Component {
         <Snackbar
           anchorOrigin={{ vertical, horizontal }}
           open={bool}
-          autoHideDuration={6000}
+          autoHideDuration={3000}
           message={message}
           onClose={this.handleClose}
           key={vertical + horizontal}
