@@ -36,7 +36,9 @@ class Cpt_HomeIPhone_Item extends Component {
     this.props.onOpenSnackbar();
   };
   render() {
-    let { product ,onAddToCart,onChangeMessage,onOpenSnackbar} = this.props;
+
+    let { product ,onAddToCart,onChangeMessage,onOpenSnackbar,search} = this.props;
+    console.log(search)
     return (
       <Paper elevation={4} className="paperProductSmart">
         <div className="headerProductSmart">

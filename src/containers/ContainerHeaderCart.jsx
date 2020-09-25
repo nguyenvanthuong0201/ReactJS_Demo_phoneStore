@@ -11,6 +11,7 @@ import {
   actLogoutButton,
   actOpenDrawerLog,
   actOpenDrawerRes,
+  actSearchProduct,
   actSnackbar,
 } from "../actions/indexActions";
 
@@ -31,7 +32,8 @@ class ContainerHeaderCart extends Component {
       userLogin,
       onButtonLogin,
       onButtonLogout,
-      informationUserLogin
+      informationUserLogin,
+      onSearchProduct,
       
 
     } = this.props;
@@ -52,6 +54,7 @@ class ContainerHeaderCart extends Component {
         onButtonLogin={onButtonLogin}
         onButtonLogout={onButtonLogout}
         informationUserLogin={informationUserLogin}
+        onSearchProduct={onSearchProduct}
       />
     );
   }
@@ -97,6 +100,9 @@ const mapDispatchToProps = (dispatch) => {
     },
     onButtonLogout:()=>{
       dispatch(actLogoutButton());
+    },
+    onSearchProduct: (keyword) => {
+      dispatch(actSearchProduct(keyword))
     }
   };
 };

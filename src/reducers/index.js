@@ -10,6 +10,7 @@ import reHeaderDrawer_Log from './reHeaderDrawer_Log'
 import reButtonUserLogin from './reButtonUserLogin'
 import reInformationUserLogin from './reInformationUserLogin'
 import reHistory from './reHistory'
+import reSearchProduct from './reSearchProduct'
 
 const appReducers = combineReducers({
     reHomeProducts,
@@ -23,5 +24,6 @@ const appReducers = combineReducers({
     reButtonUserLogin,
     reInformationUserLogin,
     reHistory,
+    reSearchProduct
 })
 export default  appReducers 

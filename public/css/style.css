@@ -9,15 +9,17 @@ body {
   background-color: #5c6bc0;
 }
 button.MuiButtonBase-root.MuiIconButton-root.iconSearch.MuiIconButton-colorInherit {
-  margin-left: -50px;
+  margin-left: -35px;
   width: 40px;
   height: 30px;
+  background-color: white;
 }
 .navbar-brand img {
   width: 130px;
 }
 input.form-control.mr-sm-2 {
   height: 30px;
+  padding-right: 28px;
 }
 span.MuiButton-label {
   color: white;
@@ -735,4 +737,7 @@ h2.payModel__informationUser-sumTotal {
 }
 .payModel__informationUserContent{
   padding-left: 20px;
+}
+.MuiPaper-root.paperProductSmart.MuiPaper-elevation4.MuiPaper-rounded {
+  overflow: hidden;
 }

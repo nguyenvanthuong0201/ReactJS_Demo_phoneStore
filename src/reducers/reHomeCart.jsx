@@ -7,7 +7,6 @@ const reHomeCart = (state=initialState,action)=>{
     let index= -1 /// -1 có nghĩa là không tìm thấy;
     switch (action.type) {
         case types.ADD_TO_CARD:
-            console.log(action)
         index = findProductInCart(state,product)    /// tìm vị trí sản phẩm khi mình bấm vào sản phẩm mình chọn
         if(index !== -1){          /// nếu tìm thấy
         state[index].quantity += quantity;     // cộng dồn sản phẩm

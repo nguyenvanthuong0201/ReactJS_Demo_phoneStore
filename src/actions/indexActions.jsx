@@ -102,6 +102,12 @@ export const actDeleteAllCart=()=>{
         type: types.DELETE_ALL_CART,
     }
 }
+export const actSearchProduct=(keyword)=>{
+    return{
+      type: types.SEARCH_PRODUCT,
+      keyword:keyword
+    }
+  }
 
 
 

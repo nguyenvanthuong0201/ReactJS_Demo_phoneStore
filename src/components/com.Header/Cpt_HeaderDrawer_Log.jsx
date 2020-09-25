@@ -6,6 +6,7 @@ import VisibilityOff from "@material-ui/icons/VisibilityOff";
 import { Badge, Button, Paper } from "@material-ui/core";
 import IconButton from "@material-ui/core/IconButton";
 import * as Message from "../../constants/Messages"
+import { Redirect } from "react-router-dom";
 
 class Cpt_HeaderDrawer_Log extends Component {
   constructor(props) {
@@ -53,6 +54,8 @@ class Cpt_HeaderDrawer_Log extends Component {
           this.props.onButtonLogin() 
           this.props.onOpenSnackbar()
           this.props.onChangeMessage(Message.MSG_LOGIN_SUCCESS)
+          return <Redirect to="/account"/>
+
       }
       else{
         this.props.onOpenSnackbar()

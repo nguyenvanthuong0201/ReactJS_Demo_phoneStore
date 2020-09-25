@@ -7,11 +7,12 @@ import { actAddToCart, actChangeMessage, actSnackbar } from '../actions/indexAct
 
 class ContainerIPhone extends Component {
     showIPhone=(products)=>{
-        let {onAddToCart,onChangeMessage,onOpenSnackbar}= this.props
+        let {onAddToCart,onChangeMessage,onOpenSnackbar,search}= this.props
         let result = null;
         if(products.length > 0 ){
             result= products.map((product,index)=>{
                 return(
+
                     <Cpt_HomeIPhone_Item 
                     product={product}
                     key={index}
@@ -25,14 +26,25 @@ class ContainerIPhone extends Component {
         return result;
     }
     render() {
-    let {products}=this.props
+    // let {match}=this.props
+    // console.log(match)
+    //--search
+    let {products,search}=this.props
+        console.log("product",products)
+    if (search) {
+        ////Search theo key word
+        products = products.filter((product) => {
+          return product.title.toLowerCase().indexOf(search.toLowerCase()) !== -1;
+        });
+      }
     return <Cpt_HomeIPhone>{this.showIPhone(products)}</Cpt_HomeIPhone>;
     }
 }
 
 const mapStateToProps = (state) => {
     return{
-        products: state.reIPhoneProducts
+        products: state.reIPhoneProducts,
+        search: state.reSearchProduct
     }
 }
 

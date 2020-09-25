@@ -19,8 +19,7 @@ import Cpt_HeaderDrawer_Log from "./Cpt_HeaderDrawer_Log";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
-import * as Message from "../../constants/Messages"
-
+import * as Message from "../../constants/Messages";
 
 ///
 
@@ -53,8 +52,21 @@ class Cpt_Header extends Component {
       showPassword: false,
       open: false,
       anchorEl: null,
+      keyWord: "",
     };
   }
+
+  onChange = (event) => {
+    let target = event.target;
+    let name = target.name;
+    let value = target.value;
+    this.setState({
+      [name]: value,
+    });
+  };
+  onSearch = () => {
+    this.props.onSearchProduct(this.state.keyWord); // dispatch searchTask
+  };
 
   onNumber = (cart) => {
     let number = 0;
@@ -65,6 +77,7 @@ class Cpt_Header extends Component {
     }
     return number;
   };
+
   onOpenDrawer = () => {
     this.props.onOpenDrawerRes();
   };
@@ -94,13 +107,12 @@ class Cpt_Header extends Component {
     localStorage.removeItem("userLogin");
     this.props.onButtonLogout();
     this.props.onOpenSnackbar();
-    this.props.onChangeMessage(Message.MSG_LOGOUT_SUCCESS)
+    this.props.onChangeMessage(Message.MSG_LOGOUT_SUCCESS);
     this.setState({
       open: false,
     });
     window.location.reload();
-    window.location.href='/'
-
+    window.location.href = "/";
   };
 
   render() {
@@ -116,8 +128,9 @@ class Cpt_Header extends Component {
       onLogin,
       userLogin,
       onButtonLogin,
-      informationUserLogin
+      informationUserLogin,
     } = this.props;
+    let { keyWord } = this.state;
     return (
       <div className="backgroundHeader">
         <div className="container">
@@ -144,11 +157,15 @@ class Cpt_Header extends Component {
                   className="form-control mr-sm-2"
                   type="text"
                   placeholder="Search"
+                  value={keyWord}
+                  name="keyWord"
+                  onChange={this.onChange}
                 />
                 <IconButton
                   aria-label="search"
                   color="inherit"
                   className="iconSearch"
+                  onClick={this.onSearch}
                 >
                   <SearchIcon />
                 </IconButton>
@@ -203,17 +220,19 @@ class Cpt_Header extends Component {
                   /// xuất hiện UserLoginHome
                   <div className="MenuButtonLoginHeader">
                     <div className="HeaderIconUsername">
-                    <IconButton
-                      aria-label="account of current user"
-                      aria-controls="menu-appbar"
-                      aria-haspopup="true"
-                      onClick={this.handleMenu}
-                      color="inherit"
-                      className="iconUserLoginHead"
-                    >
-                      <AccountCircle className="iconButtonLogin" />
-                    </IconButton>
-                    <h6 className="HeaderUserNameLogin">Hi {informationUserLogin.userName}</h6>
+                      <IconButton
+                        aria-label="account of current user"
+                        aria-controls="menu-appbar"
+                        aria-haspopup="true"
+                        onClick={this.handleMenu}
+                        color="inherit"
+                        className="iconUserLoginHead"
+                      >
+                        <AccountCircle className="iconButtonLogin" />
+                      </IconButton>
+                      <h6 className="HeaderUserNameLogin">
+                        Hi {informationUserLogin.userName}
+                      </h6>
                     </div>
                     <Menu
                       id="simple-menu"
@@ -221,20 +240,30 @@ class Cpt_Header extends Component {
                       onClose={this.handleClose}
                       className="menuSimple"
                     >
-                     <Link to="/account" className="linkToPay">
-                       <MenuItem onClick={this.handleClose} className="menuAccount">Tài khoản</MenuItem>
-                       </Link>
+                      <Link to="/account" className="linkToPay">
+                        <MenuItem
+                          onClick={this.handleClose}
+                          className="menuAccount"
+                        >
+                          Tài khoản
+                        </MenuItem>
+                      </Link>
                       <Link to="/pay" className="linkToPay">
-                        <MenuItem onClick={this.handleClose} className="menuPayButton">
+                        <MenuItem
+                          onClick={this.handleClose}
+                          className="menuPayButton"
+                        >
                           Thanh toán
                         </MenuItem>
                       </Link>
-                      <MenuItem onClick={this.handleCloseButton} className="menuLogout">
+                      <MenuItem
+                        onClick={this.handleCloseButton}
+                        className="menuLogout"
+                      >
                         Đăng xuất
                       </MenuItem>
                     </Menu>
                   </div>
-                  
                 ) : (
                   //////////////////////
 

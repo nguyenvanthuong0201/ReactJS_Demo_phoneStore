@@ -1,6 +1,7 @@
 import * as types from "../constants/ActionTypes";
 import ranDomString from "randomstring";
 import { Container } from "@material-ui/core";
+import { Redirect } from "react-router-dom";
 let data=JSON.parse(localStorage.getItem("user"))
 
 let initialState= data? data : []
@@ -24,6 +25,7 @@ const reCustomer=(state=initialState,action)=>{
         return [...state];        
         case types.LOGIN:
         let users= JSON.parse(localStorage.getItem("user"));
+        let flag = false
         if(users){
             if(users.length > 0 ){
                 users.map((user,index)=>{
@@ -31,6 +33,7 @@ const reCustomer=(state=initialState,action)=>{
                         if(user.password === action.customer.password){
                            const userLogin=user
                            index=index
+                        //    flag = true
                            localStorage.setItem("userLogin",JSON.stringify(userLogin))
                            window.location.reload();
                         }
@@ -42,10 +45,8 @@ const reCustomer=(state=initialState,action)=>{
             }
         }
         else{
-            alert("Đăng nhập thất bại")
-            
+            alert("Đăng nhập thất bại")   
         }
-        // let flag = false
      
         
         // if(flag === true){
